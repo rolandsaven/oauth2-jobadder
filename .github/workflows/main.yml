@@ -23,10 +23,11 @@ jobs:
         coverage: xdebug #optional, setup coverage driver
         tools: php-cs-fixer, phpunit #optional, setup tools globally
     
-    - name: Get composer cache directory
+    - name: Get Composer Cache Directory
       id: composer-cache
-      run: echo "::set-output name=dir::$(composer config cache-files-dir)":  
-        
+      run: |
+        echo "::set-output name=dir::$(composer config cache-files-dir)"
+  
     - name: Cache composer dependencies
       uses: actions/cache@v1
       with:
