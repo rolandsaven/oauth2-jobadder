@@ -1,8 +1,11 @@
-![](https://github.com/rolandsaven/oauth2-jobadder/workflows/Main%20Workflow/badge.svg)
-
 # JobAdder Provider for OAuth 2.0 Client
 
-This package provides JobAdder OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+[![Latest Stable Version](https://poser.pugx.org/rolandsaven/oauth2-jobadder/v/stable)](https://packagist.org/packages/rolandsaven/oauth2-jobadder)
+[![License](https://img.shields.io/packagist/l/alexmasterov/oauth2-stackexchange.svg)](https://github.com/AlexMasterov/oauth2-stackexchange/blob/master/LICENSE)
+![](https://github.com/rolandsaven/oauth2-jobadder/workflows/Main%20Workflow/badge.svg)
+
+
+This package provides [JobAdder](https://jobadder.com) OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Installation
 
