@@ -1,7 +1,7 @@
 # JobAdder Provider for OAuth 2.0 Client
 
 [![Latest Stable Version](https://poser.pugx.org/rolandsaven/oauth2-jobadder/v/stable)](https://packagist.org/packages/rolandsaven/oauth2-jobadder)
-[![License](https://img.shields.io/packagist/l/alexmasterov/oauth2-stackexchange.svg)](https://github.com/AlexMasterov/oauth2-stackexchange/blob/master/LICENSE)
+[![License](https://img.shields.io/packagist/l/rolandsaven/oauth2-jobadder.svg)](https://github.com/RolandSaven/oauth2-jobadder/blob/master/LICENSE)
 ![](https://github.com/rolandsaven/oauth2-jobadder/workflows/Main%20Workflow/badge.svg)
 
 
