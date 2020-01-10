@@ -1,4 +1,14 @@
 <?php
+
+/*
+ * This file is part of oauth2-jobadder.
+ *
+ * (c) Roland Kalocsaven <rolandka@live.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace RolandSaven\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
@@ -14,8 +24,6 @@ class JobAdderResourceOwner implements ResourceOwnerInterface
 
     /**
      * Creates new resource owner.
-     *
-     * @param array $response
      */
     public function __construct(array $response)
     {
@@ -25,7 +33,7 @@ class JobAdderResourceOwner implements ResourceOwnerInterface
     /**
      * Returns the identifier of the authorized resource owner.
      *
-     * @return int|null
+     * @return null|int
      */
     public function getId()
     {
@@ -35,7 +43,7 @@ class JobAdderResourceOwner implements ResourceOwnerInterface
     /**
      * Returns resource owner first name.
      *
-     * @return string|null
+     * @return null|string
      */
     public function getFirstName()
     {
@@ -45,7 +53,7 @@ class JobAdderResourceOwner implements ResourceOwnerInterface
     /**
      * Returns resource owner last name.
      *
-     * @return string|null
+     * @return null|string
      */
     public function getLastName()
     {
@@ -63,9 +71,9 @@ class JobAdderResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Returns the resource owner email address
+     * Returns the resource owner email address.
      *
-     * @return string|null
+     * @return null|string
      */
     public function getEmail()
     {
@@ -73,9 +81,9 @@ class JobAdderResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Returns the resource owner avatar url
+     * Returns the resource owner avatar url.
      *
-     * @return string|null
+     * @return null|string
      */
     public function getAvatar()
     {

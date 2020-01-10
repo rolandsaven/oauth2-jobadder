@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of oauth2-jobadder.
+ *
+ * (c) Roland Kalocsaven <rolandka@live.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace RolandSaven\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
@@ -9,14 +18,13 @@ use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
 class JobAdder extends AbstractProvider
-{   
-
+{
     use BearerAuthorizationTrait;
 
     /**
-     * @var array|null
+     * @var null|array
      */
-    protected $scope = null;
+    protected $scope;
 
     /**
      * Returns the base URL for authorizing a client.
@@ -31,7 +39,6 @@ class JobAdder extends AbstractProvider
     /**
      * Returns the base URL for requesting an access token.
      *
-     * @param array $params
      * @return string
      */
     public function getBaseAccessTokenUrl(array $params)
@@ -42,19 +49,15 @@ class JobAdder extends AbstractProvider
     /**
      * Returns the URL for requesting the resource owner's details.
      *
-     * @param AccessToken $token
      * @return string
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
-    {   
+    {
         return 'https://api.jobadder.com/v2/users/current';
     }
 
     /**
      * Generate a user object from a successful user details request.
-     *
-     * @param array $response
-     * @param AccessToken $token
      *
      * @return JobAdderResourceOwner
      */
@@ -66,14 +69,12 @@ class JobAdder extends AbstractProvider
     /**
      * Check a provider response for errors.
      *
+     * @param string $data Parsed response data
+     *
      * @throws IdentityProviderException
-     * @param  ResponseInterface $response
-     * @param  string $data Parsed response data
-     * @return void
      */
     protected function checkResponse(ResponseInterface $response, $data)
     {
-        
         if ($response->getStatusCode() >= 400) {
             throw new IdentityProviderException(
                 $data['message'] ?: $response->getReasonPhrase(),
